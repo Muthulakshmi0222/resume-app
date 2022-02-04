@@ -12,11 +12,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['Template', 'Build your resume', 'Blog'];
+const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
-    
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -35,10 +34,7 @@ const ResponsiveAppBar = () => {
     setAnchorElUser(null);
   };
 
-
-
   return (
-    <div className='image'>
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -48,7 +44,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            Resume creater
+            LOGO
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -93,7 +89,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            Resume creater
+            LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -139,24 +135,6 @@ const ResponsiveAppBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
-     
-     <div>
-     <h1 className='Heading'>Logo Resume Builder</h1>
-     <h3 className='SubHeading'>Design stunning resumes with Logo</h3>
-     </div>
-      
-      <div className='combineditem'>
-          <img className='image1' src='https://www.careertoolbelt.com/wp-content/uploads/2019/08/iStock-1160804712.jpg' alt='resumebuilder1'></img>
-          <p className='content'>Give your resume a brilliant upgrade with a free photo resume template from our expertly-curated selection of ready-to-use designs. Personalize it with ease using our intuitive editor.</p>
-      </div>
-       <p className='buttonwords'>Build your own resume</p>
-      <Button variant="contained" className='button' onClick={this.handleClick} >Here</Button>
-
-      <p className='copyright'>@copyright</p>
-
-    </div>
-  )
-}
-
+  );
+};
 export default ResponsiveAppBar;
-

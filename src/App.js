@@ -1,18 +1,16 @@
-import './App.css';
-import ResponsiveAppBar from './Landingpage';
-import {BrowserRouter as Route,Switch} from 'react-router-dom';
+import React from 'react';
+import {Route, Switch } from "react-router-dom";
+import LandingPage from '../src/components/LandingPage';
 import TemplateData from '../src/components/TemplateData';
 
 function App() {
   return (
-    <div className="App">
-      <Switch>
-        <Route exact path="/">
-          <ResponsiveAppBar />
-        </Route>
+    <Switch>
+    <React.Fragment>
+        <Route exact path='/' component={LandingPage} />
         <Route exact path='/templates' component={TemplateData} />
-      </Switch>
-      </div>
+    </React.Fragment>
+    </Switch>
   );
 }
 
